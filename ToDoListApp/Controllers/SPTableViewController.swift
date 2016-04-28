@@ -10,14 +10,14 @@ import UIKit
 
 class SPTableViewController: UITableViewController {
     
+    var item : SPModel?
+    
     var items = [SPModel]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationItem.title = "- = ToDo List = -"
-        
+                
     }
  
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -28,5 +28,21 @@ class SPTableViewController: UITableViewController {
         return items.count
     }
     
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "Cell"
+        
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! SPTableViewCell
+        
+        let item = items[indexPath.row]
+        
+        cell.itemName.text = item.itemName
+        
+        
+        return cell
+    }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
 }
