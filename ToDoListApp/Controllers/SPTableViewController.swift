@@ -9,5 +9,24 @@
 import UIKit
 
 class SPTableViewController: UITableViewController {
-
+    
+    var items = [SPModel]()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = "- = ToDo List = -"
+        
+    }
+ 
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return items.count
+    }
+    
+    
 }
