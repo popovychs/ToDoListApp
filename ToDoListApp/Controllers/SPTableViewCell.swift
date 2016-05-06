@@ -9,14 +9,13 @@
 import UIKit
 
 class SPTableViewCell: UITableViewCell {
-
-    @IBOutlet var itemName: UILabel!
-    @IBOutlet var itemTextField: UITextField!
-    @IBOutlet var saveButton: UIButton!
+    
+    @IBOutlet weak var cellLabel: UILabel!
+    
     
     override func awakeFromNib() {
         
-        saveButton.layer.cornerRadius = 5
+        
     }
     
 }

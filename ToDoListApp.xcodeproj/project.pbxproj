@@ -11,10 +11,10 @@
 		3E5E8C3A1CD2762700DBDB47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8C381CD2762700DBDB47 /* Main.storyboard */; };
 		3E5E8C3C1CD2762700DBDB47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8C3B1CD2762700DBDB47 /* Assets.xcassets */; };
 		3E5E8C3F1CD2762700DBDB47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E5E8C3D1CD2762700DBDB47 /* LaunchScreen.storyboard */; };
-		3E5E8C4A1CD2786900DBDB47 /* SPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8C491CD2786900DBDB47 /* SPTableViewController.swift */; };
 		3E5E8C4C1CD278B200DBDB47 /* SPTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8C4B1CD278B200DBDB47 /* SPTableViewCell.swift */; };
 		3E5E8C501CD27CE600DBDB47 /* SPModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8C4F1CD27CE600DBDB47 /* SPModel.swift */; };
 		3E5E8C531CD293AF00DBDB47 /* SPDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5E8C521CD293AF00DBDB47 /* SPDetailViewController.swift */; };
+		3EA03A111CDBDA5E00E06E9D /* SPTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EA03A101CDBDA5E00E06E9D /* SPTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +24,10 @@
 		3E5E8C3B1CD2762700DBDB47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3E5E8C3E1CD2762700DBDB47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E5E8C401CD2762700DBDB47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3E5E8C491CD2786900DBDB47 /* SPTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPTableViewController.swift; path = Controllers/SPTableViewController.swift; sourceTree = "<group>"; };
 		3E5E8C4B1CD278B200DBDB47 /* SPTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPTableViewCell.swift; path = Controllers/SPTableViewCell.swift; sourceTree = "<group>"; };
 		3E5E8C4F1CD27CE600DBDB47 /* SPModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPModel.swift; path = Model/SPModel.swift; sourceTree = "<group>"; };
 		3E5E8C521CD293AF00DBDB47 /* SPDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPDetailViewController.swift; path = Controllers/SPDetailViewController.swift; sourceTree = "<group>"; };
+		3EA03A101CDBDA5E00E06E9D /* SPTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SPTableViewController.swift; path = Controllers/SPTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 		3E5E8C461CD276A700DBDB47 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3E5E8C491CD2786900DBDB47 /* SPTableViewController.swift */,
+				3EA03A101CDBDA5E00E06E9D /* SPTableViewController.swift */,
 				3E5E8C4B1CD278B200DBDB47 /* SPTableViewCell.swift */,
 				3E5E8C521CD293AF00DBDB47 /* SPDetailViewController.swift */,
 			);
@@ -177,8 +177,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E5E8C531CD293AF00DBDB47 /* SPDetailViewController.swift in Sources */,
+				3EA03A111CDBDA5E00E06E9D /* SPTableViewController.swift in Sources */,
 				3E5E8C501CD27CE600DBDB47 /* SPModel.swift in Sources */,
-				3E5E8C4A1CD2786900DBDB47 /* SPTableViewController.swift in Sources */,
 				3E5E8C4C1CD278B200DBDB47 /* SPTableViewCell.swift in Sources */,
 				3E5E8C351CD2762700DBDB47 /* AppDelegate.swift in Sources */,
 			);
@@ -330,6 +330,7 @@
 				3E5E8C451CD2762700DBDB47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

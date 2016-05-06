@@ -10,14 +10,13 @@ import UIKit
 
 class SPTableViewController: UITableViewController {
     
-    var item : SPModel?
+    //var item : SPModel?
     
     var items = [SPModel]()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
     }
  
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -36,7 +35,7 @@ class SPTableViewController: UITableViewController {
         
         let item = items[indexPath.row]
         
-        cell.itemName.text = item.itemName
+        cell.cellLabel.text = item.itemName
         
         
         return cell
@@ -45,4 +44,16 @@ class SPTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
     }
+    
+    @IBAction func unwindToList(sender: UIStoryboardSegue) {
+        let scrViewCon = sender.sourceViewController as? SPDetailViewController
+        let item = scrViewCon?.item
+        if scrViewCon != nil && item?.itemName != "" {
+            // Add new item
+            let newIndexPath = NSIndexPath(forRow: items.count, inSection: 0)
+            items.append(item!)
+            tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
+        }
+    }
+    
 }
