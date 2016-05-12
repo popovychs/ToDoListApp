@@ -10,8 +10,6 @@ import UIKit
 
 class SPTableViewController: UITableViewController {
     
-    //var item : SPModel?
-    
     var items = [SPModel]()
     
     override func viewDidLoad() {
@@ -19,6 +17,10 @@ class SPTableViewController: UITableViewController {
         
         navigationItem.leftBarButtonItem = editButtonItem()
         
+        // Load Saved Items
+        if let savedItems = loadItems() {
+            items += savedItems
+        }
     }
  
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -76,6 +78,8 @@ class SPTableViewController: UITableViewController {
                 items.append(item!)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)
             }
+            
+            saveItems()
         }
     }
     
@@ -84,12 +88,31 @@ class SPTableViewController: UITableViewController {
         if editingStyle == .Delete {
             
             items.removeAtIndex(indexPath.row)
+            saveItems()
             tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
             
         } else if editingStyle == .Insert {
             
         }
 
+    }
+    
+    //MARK: - Save Items
+    
+    func saveItems() {
+        
+        let isSaved = NSKeyedArchiver.archiveRootObject(items, toFile: SPModel.archiveURL.path!)
+        
+        if !isSaved {
+            print("Failed to save items..")
+        }
+    }
+    
+    //MARK: - Load Items
+    
+    func loadItems() -> [SPModel]? {
+        
+        return NSKeyedUnarchiver.unarchiveObjectWithFile(SPModel.archiveURL.path!) as? [SPModel]
     }
     
 }
