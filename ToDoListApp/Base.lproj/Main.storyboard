@@ -32,6 +32,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="cellLabel" destination="w97-vq-vkC" id="lao-MT-7Wp"/>
+                                    <segue destination="WSB-TE-AFD" kind="show" identifier="ShowDetail" id="nBT-aY-hIc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -152,4 +153,7 @@
             <point key="canvasLocation" x="1895" y="254"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="nBT-aY-hIc"/>
+    </inferredMetricsTieBreakers>
 </document>

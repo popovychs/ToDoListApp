@@ -20,6 +20,14 @@ class SPDetailViewController: UIViewController {
     
     var item = SPModel?()
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if let item = item {
+            itemTextField.text = item.itemName
+        }
+    }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
             let name = itemTextField.text ?? ""
@@ -28,7 +36,15 @@ class SPDetailViewController: UIViewController {
     }
     
     @IBAction func cancel(sender: UIBarButtonItem) {
-        dismissViewControllerAnimated(true, completion: nil)
+        
+        let isInAddMode = presentingViewController is UINavigationController
+        
+        if isInAddMode {
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            navigationController!.popViewControllerAnimated(true)
+        }
+        
     }
     
 }
